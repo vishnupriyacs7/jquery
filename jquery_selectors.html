@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+</head>
+<body>
+    <h1 id="heading" class="c1">Jquery Programs</h1>
+    <p>Hello World</p>
+    <p>Hello Scope India</p>
+    <p class="c1">Hello World 2</p>
+    <p class="c1">Hello World 3</p>
+    <input type="text" placeholder="Enter your name">
+    <input type="email" placeholder="Enter your email">
+    <input type="password" placeholder="Enter your phone number">
+    <br>
+    <button>Hide Paragraphs</button>
+
+    <script>
+        $(document).ready(function(){
+           //element selector
+           $("button").click(function(){
+                //$("p").hide();
+
+                //id selector
+                //$("#heading").hide();
+
+                //class selector
+                //$(".c1").hide();
+
+                //attribute selector
+                // $("[type]").hide();
+                // $("[type='text']").hide();
+                $("input[type='email']").hide();
+                $("[class='c1']").hide();
+            });
+
+            $("p").click(function(){
+                $(this).hide();
+            });
+
+            
+        });
+      
+    </script>
+    
+</body>
+</html>
