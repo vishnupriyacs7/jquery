@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $("p").click(function(){
+            //     $(this).hide();
+            // });
+
+            // $("p").on("click",function(){
+            //     $(this).hide();
+            // });
+
+            $("p").on({
+                click : function(){
+                    // $(this).hide();
+                },
+                mouseenter:function(){
+                    $(this).css("background","red");
+                },
+                mouseleave:function(){
+                    $(this).css("background","lavender");
+                },
+                mouseup:function(){
+                    $(this).css("background","lightgreen");
+                }
+            });
+            // $("h1").dblclick(function(){
+            //     $(this).hide();
+            // });
+            // $("h1").mouseenter(function(){
+            //     $(this).css("background","yellow");
+            // });
+            // $("span").mouseleave(function(){
+            //     $(this).css("background","lightblue");
+            // });
+            // $("p").mousedown(function(){
+            //     $(this).css("background","pink");
+            // });
+            // $("p").mouseup(function(){
+            //     $(this).css("background","lightgreen");
+            // });
+            // $("p").hover(function(){
+            //     $(this).css("background","red");
+            // },function(){
+            //     $(this).css("background","lavender");
+            // });
+
+            $(":text").focus(function(){
+                $(this).css("background","#cccccc");
+            });
+            $(":text").blur(function(){
+                $(this).css("background","#fff");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>jQuery Event Handling</h1>
+    <p>If you click on me, I will disappear.</p>
+    <p>Click me away!</p>
+    <p>Click me too!</p>
+    <span>mouse enter and leave </span>
+    <br><br>
+    Name : <input type="text">
+
+</body>
+</html>

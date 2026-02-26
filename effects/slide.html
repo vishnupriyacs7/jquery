@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            border: 2px solid black;
+        }
+        #panel{
+            height: 100px;
+            background-color:yellowgreen ;
+            display: none;
+        }
+    </style>
+    <script src="../jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        //    $("#flip").click(function(){
+        //         $("#panel").slideDown();
+        //    });
+
+        //    $("#flip").dblclick(function(){
+        //         $("#panel").slideUp();
+        //    })
+
+        $("#flip").dblclick(function(){
+                $("#panel").slideToggle();
+           })
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery Sliding Effect</h2>
+    <hr>
+    <div id="flip">Click me to slide down</div>
+    <div id="panel">Hii Nice To Meet YOU.. :)</div>
+</body>
+</html>

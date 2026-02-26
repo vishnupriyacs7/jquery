@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p#normal").hide();
+                $("p#slow").hide("slow");
+                $("p#fast").hide("fast");
+                $("p#time1").hide(5000);
+                $("p#time2").hide(3000);
+            });
+
+            $("#show").click(function(){
+                $("p#normal").show();
+                $("p#slow").show("slow");
+                $("p#fast").show("fast");
+                $("p#time1").show(5000);
+                $("p#time2").show(3000,function(){
+                    alert("last paragraph visible now");
+                });
+            });
+
+            $("#toggle").click(function(){
+                $("p#normal").toggle();
+                $("p#slow").toggle("slow",function(){
+                    $("*").css("background","skyblue");
+                });
+                $("p#fast").toggle("fast");
+                $("p#time1").toggle(5000);
+                $("p#time2").toggle(3000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p id="normal">Normal hide show effect</p>
+    <p id="slow">slow hide show effect</p>
+    <p id="fast">fast hide show effect</p>
+    <p id="time1">time hide show effect</p>
+    <p id="time2">time hide show effect</p>
+    <button id="hide">Click to Hide</button><button id="show">Click to Show</button><button id="toggle">Click to Toggle</button>
+</body>
+</html>

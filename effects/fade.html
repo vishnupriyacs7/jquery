@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-4.0.0.min.js"></script>
+    <style>
+        div{
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+            background-color: rgb(176, 48, 193);
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#fadeout").click(function(){
+                $("div.normal").fadeOut();
+                 $("div.slow").fadeOut("slow");
+                  $("div.fast").fadeOut("fast");
+                   $("div.time").fadeOut(5000);
+            });
+
+            $("#fadein").click(function(){
+                $("div.normal").fadeIn();
+                 $("div.slow").fadeIn("slow");
+                  $("div.fast").fadeIn("fast");
+                   $("div.time").fadeIn(5000);
+            });
+
+            $("#toggle").click(function(){
+                $("div.normal").fadeToggle();
+                 $("div.slow").fadeToggle("slow");
+                  $("div.fast").fadeToggle("fast");
+                   $("div.time").fadeToggle(5000);
+            });
+
+            $("#to").click(function(){
+                $("div.normal").fadeTo(1000,0,function(){
+                    alert("first circle fully transparent now !!")
+                });
+                 
+                  $("div.fast").fadeTo(1000,0.4);
+                  $("div.slow").fadeTo(1000,1);
+                   $("div.time").fadeTo(1000,0.7,function(){
+                    alert("circle faded to opacity o.7")
+                   });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="normal"></div><br>
+    <div class="fast"></div><br>
+    <div class="slow"></div><br>
+    <div class="time"></div><br>
+    <button id="fadeout">Click Me to Fadeout</button>
+    <button id="fadein">Click Me to Fadein</button>
+    <button id="to">FadeTo</button>
+    <button id="toggle">Toggle</button>
+</body>
+</html>
